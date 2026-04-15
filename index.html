@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Escape Room Web</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
   <header class="cabecera">
@@ -51,25 +53,60 @@
       <p id="mensajeReto3" class="mensaje"></p>
     </section>
 
-        <section id="reto3" class="pantalla oculta">
-      <h2>Reto 3</h2>
-      <div class="tarjeta">
-        <p><strong>Nombre:</strong> <span id="nombrePersonaje"></span></p>
-        <p><strong>Edad:</strong> <span id="edadPersonaje"></span></p>
-        <p><strong>Profesión:</strong> <span id="profesionPersonaje"></span></p>
-      </div>
-      <p>Escribe aquí la respuesta final del reto:</p>
-      <input type="text" id="respuestaCiudad" placeholder="Tu respuesta">
-      <button id="btn-reto3">Responder</button>
-      <p id="mensajeReto3" class="mensaje"></p>
-    </section>
+<section id="reto4" class="pantalla oculta">
+  <h2>// reto 4 — limpieza de consola</h2>
+  <p>El terminal está lleno de basura. Encuentra y elimina el <span class="alerta">CRITICAL BUG</span> para arrancar el servidor.</p>
+  <!-- aqui se meteran los logs -->
+  <div id="contenedor-logs"></div>
+  <!-- NUEVO BOTÓN -->
+  <button id="btn-reiniciar-reto4" class="btn-secundario">↻ Reiniciar consola</button>
+  <p id="mensajeReto4" class="mensaje"></p>
+</section>
 
     <section id="pantalla-final" class="pantalla oculta">
       <h2>¡Has escapado!</h2>
       <p id="mensajeFinal">Has completado el juego.</p>
       <button id="btn-reiniciar">Jugar otra vez</button>
     </section>
+    <!-- Pantallas de fallo y exito -->
+    <!-- PANTALLAS GLOBALES DE RESULTADO -->
+    <section id="pantalla-exito" class="pantalla oculta pantalla-resultado">
+      <div class="terminal-box success">
+        <div class="terminal-header">
+          <span class="status-led green"></span>
+          <span>SYSTEM ONLINE</span>
+        </div>
+        <ul class="checklist">
+          <li>✓ Temperature normalized</li>
+          <li>✓ Server restarted successfully</li>
+          <li>✓ All systems operational</li>
+        </ul>
+        <p class="mission-message">Mission Complete, Developer.</p>
+        <p class="mission-sub">You've successfully debugged the production server and saved the day. Gabriel can
+          continue his vacation in peace.</p>
+        <button id="btn-exito-continuar" class="btn-continuar">Continue →</button>
+        <button id="btn-exito-reiniciar" class="btn-reiniciar-retro">↻ Restart Challenge</button>
+        <p class="achievement">Achievement Unlocked: Bug Hunter Elite</p>
+      </div>
+    </section>
 
+    <section id="pantalla-error" class="pantalla oculta pantalla-resultado">
+      <div class="terminal-box failure">
+        <div class="terminal-header">
+          <span class="status-led red"></span>
+          <span>DEPLOY FAILED</span>
+        </div>
+        <ul class="error-list">
+          <li>✗ CPU Overheated (105°C)</li>
+          <li>✗ Database corrupted</li>
+        </ul>
+        <p class="mission-message">The server has melted.</p>
+        <p class="mission-sub">You've officially given up, and the production environment is now a pile of digital ash.
+          Gabriel is being called back from his vacation, and he is not happy.</p>
+        <button id="btn-error-reintentar" class="btn-reintentar">↻ Restart Challenge</button>
+        <p class="achievement">Achievement Unlocked: Professional Quitter</p>
+      </div>
+    </section>
   </main>
 
   <footer class="pie">
@@ -77,5 +114,7 @@
   </footer>
 
   <script src="js/script.js"></script>
+  <script src="js/reto4.js"></script>
 </body>
+
 </html>

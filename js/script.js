@@ -50,11 +50,12 @@ function ocultarPantallas() {
 
 function mostrarPantalla(pantalla) {
   ocultarPantallas();
-  pantalla.classList.remove("oculta");
+  pantalla.classList.remove("oculta"); // remueve oculta de la pantalla que deba aparecer
 }
 
 // TODO: crea una función para comprobar el reto 1
 function comprobarReto1() {
+ mensajeReto1.textContent = "¡Exitoso, ese es correcto!";
   // 1. Leer el valor del input
   // 2. Compararlo con la solución
   // 3. Mostrar un mensaje

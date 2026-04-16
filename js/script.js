@@ -40,6 +40,8 @@ const pantallaError = document.getElementById("pantalla-error");
 
 const mensajeFinal = document.getElementById("mensajeFinal");
 
+const botonRendirse = document.querySelectorAll(".senior-btn");
+
 // =========================
 // FUNCIONES
 // =========================
@@ -92,17 +94,6 @@ function comprobarReto2(opcionSeleccionada) {
   // Muestra mensaje y avanza si acierta
 }
 
-// TODO: crea una función para mostrar los datos del objeto en pantalla
-function cargarPersonaje() {
-  // Asigna valores a nombrePersonaje, edadPersonaje y profesionPersonaje
-}
-
-// TODO: crea una función para comprobar el reto 3
-function comprobarReto3() {
-  // Leer la respuesta del usuario
-  // Comparar con el dato correcto del objeto
-  // Mostrar mensaje final si acierta
-}
 
 function reiniciarJuego() {
   numeroJugador.value = "";
@@ -120,6 +111,12 @@ function reiniciarJuego() {
 //temporalmente pongo reto 4
 btnEmpezar.addEventListener("click", function () {
   mostrarPantalla(reto2);
+});
+
+botonRendirse.forEach(btn => {
+  btn.addEventListener("click", () => {
+    mostrarPantalla(pantallaError);
+  });
 });
 
 btnReto1.addEventListener("click", comprobarReto1);

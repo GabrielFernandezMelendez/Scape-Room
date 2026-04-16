@@ -1,4 +1,8 @@
 
+function iniciarReto3() {
+}
+
+
 // el objeto
 const serverStatus = { 
 cpuLoad: "99%",
@@ -20,6 +24,9 @@ inputRespuesta.addEventListener('keypress', function (e) {
 
         if (userValue === serverStatus.temperature) {
             mensajeReto3.textContent = "¡Genial! Enfriamiento activado. Reiniciando...";
+            setTimeout(() => { // Pequeño retraso para que se vea el botón rojo
+                    mostrarPantalla(reto4);
+                }, 600); 
         } else {
             alert("Error: ¡La temperatura sigue subiendo! Inténtalo de nuevo.");
             inputRespuesta.value = "";

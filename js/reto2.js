@@ -51,7 +51,7 @@ function iniciarReto2() {
                 
                 // Integramos con el código del equipo: mostramos su pantalla de éxito
                 setTimeout(() => { // Pequeño retraso para que se vea el botón rojo
-                    mostrarPantalla(pantallaExito);
+                    mostrarPantalla(reto3);
                 }, 500); 
 
             } else {

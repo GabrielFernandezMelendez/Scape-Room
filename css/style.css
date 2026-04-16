@@ -424,12 +424,14 @@ button:active {
   letter-spacing: 0.1em;
 }
 
-/* Grid de historial (2 columnas) */
+/* Grid de historial (Cambiado a 4 columnas) */
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr); 
   gap: 12px;
   margin-bottom: 25px;
+  max-width: 1000px; 
+  width: 100%;
 }
 
 /* Botones de historial */

@@ -32,26 +32,61 @@
     </section>
 
     <section id="reto2" class="pantalla oculta">
-      <h2>Reto 2</h2>
-      <p>Aquí irá el segundo reto.</p>
-      <div id="listaPalabras" class="lista-palabras">
-        <!-- Inserta aquí elementos desde JavaScript -->
-      </div>
-      <p id="mensajeReto2" class="mensaje"></p>
+    <div class="terminal-container">
+        <header>
+            <h1>BROWSER HISTORY</h1>
+            <p class="subtitle">Last accessed: 2 minutes ago</p>
+            <p class="warning">Find the clue before time runs out ...</p>
+        </header>
+
+        <div id="history-grid" class="grid-container"></div>
+
+        <div class="button-wrapper">
+            <button class="senior-btn">CALL THE SENIOR</button>
+        </div>
+
+        <div id="message-box" class="hidden"></div>
+        
+    </div>
     </section>
 
-    <section id="reto3" class="pantalla oculta">
-      <h2>Reto 3</h2>
-      <div class="tarjeta">
-        <p><strong>Nombre:</strong> <span id="nombrePersonaje"></span></p>
-        <p><strong>Edad:</strong> <span id="edadPersonaje"></span></p>
-        <p><strong>Profesión:</strong> <span id="profesionPersonaje"></span></p>
-      </div>
-      <p>Escribe aquí la respuesta final del reto:</p>
-      <input type="text" id="respuestaCiudad" placeholder="Tu respuesta">
-      <button id="btn-reto3">Responder</button>
-      <p id="mensajeReto3" class="mensaje"></p>
-    </section>
+=========================
+RETO 3 — TEMPERATURA OCULTA
+Responsable: Tatiana
+=========================
+<section id="reto3" class="pantalla oculta">  
+
+<div class="terminal">
+  <div class="terminal-header">
+
+    <span class="dot red"></span>
+    <span class="dot yellow"></span>
+    <span class="dot green"></span>
+
+    <p>server-config.json</p>
+  </div>
+
+  <div class="terminal-body">
+  
+    <p>1 cpuLoad: <span id="cpuLoad"></span></p>
+    <p>2 "ip": "192.168.1.111.1123",</p>
+    <p>3 "uptime": "72 days",</p>
+    <p class="error">4 temperature: <span id="temp-value"></span></p>
+    <p>5 "status": "overheated"</p>
+    <p>6 "lastChecked": "2024-06-01T12:00:00Z"</p>
+    <p>7 "actions": ["shutdown", "coolingSystem", "notifyAdmin"]</p>
+   
+
+  <input type="text" id="respuestaReto3" placeholder="¿Cuál es la temperatura?">
+
+  <p id="mensajeReto3" class="mensaje"></p>
+
+</div>
+</div>
+
+<button class="cta">CALL THE SENIOR</button>
+
+</section>
 
 <section id="reto4" class="pantalla oculta">
   <h2>// reto 4 — limpieza de consola</h2>
@@ -115,6 +150,8 @@
 
   <script src="js/script.js"></script>
   <script src="js/reto4.js"></script>
+  <script src="js/reto2.js"></script>
+
 </body>
 
 </html>

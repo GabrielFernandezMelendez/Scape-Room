@@ -62,7 +62,7 @@ function mostrarPantalla(pantalla) {
   pantalla.classList.remove("oculta");
 
   // Si es el reto4, inicializar su lógica 
-  if (pantalla.id === "reto4") {
+  if (pantalla.id === "reto3") {
     if (typeof iniciarReto4 === "function") {
       iniciarReto4();
     }

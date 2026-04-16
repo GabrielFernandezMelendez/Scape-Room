@@ -32,13 +32,24 @@
     </section>
 
     <section id="reto2" class="pantalla oculta">
-      <h2>Reto 2</h2>
-      <p>Aquí irá el segundo reto.</p>
-      <div id="listaPalabras" class="lista-palabras">
-        <!-- Inserta aquí elementos desde JavaScript -->
-      </div>
-      <p id="mensajeReto2" class="mensaje"></p>
+    <div class="terminal-container">
+        <header>
+            <h1>BROWSER HISTORY</h1>
+            <p class="subtitle">Last accessed: 2 minutes ago</p>
+            <p class="warning">Find the clue before time runs out ...</p>
+        </header>
+
+        <div id="history-grid" class="grid-container"></div>
+
+        <div class="button-wrapper">
+            <button class="senior-btn">CALL THE SENIOR</button>
+        </div>
+
+        <div id="message-box" class="hidden"></div>
+        
+    </div>
     </section>
+
 
     <section id="reto3" class="pantalla oculta">
       <h2>Reto 3</h2>
@@ -115,6 +126,8 @@
 
   <script src="js/script.js"></script>
   <script src="js/reto4.js"></script>
+  <script src="js/reto2.js"></script>
+
 </body>
 
 </html>

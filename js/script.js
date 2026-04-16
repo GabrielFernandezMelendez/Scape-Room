@@ -62,9 +62,9 @@ function mostrarPantalla(pantalla) {
   pantalla.classList.remove("oculta");
 
   // Si es el reto4, inicializar su lógica 
-  if (pantalla.id === "reto4") {
-    if (typeof iniciarReto4 === "function") {
-      iniciarReto4();
+  if (pantalla.id === "reto2") {
+    if (typeof iniciarReto2 === "function") {
+      iniciarReto2();
     }
   }
 }
@@ -119,7 +119,7 @@ function reiniciarJuego() {
 // =========================
 //temporalmente pongo reto 4
 btnEmpezar.addEventListener("click", function () {
-  mostrarPantalla(reto4);
+  mostrarPantalla(reto2);
 });
 
 btnReto1.addEventListener("click", comprobarReto1);

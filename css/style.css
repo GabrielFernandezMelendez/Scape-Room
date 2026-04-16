@@ -375,6 +375,54 @@ button:active {
   color: var(--red);
 }
 
+/* ===== RETO 3 — TEMPERATURA OCULTA ===== */
+
+.terminal {
+  background: #111;
+  border-radius: 14px;
+  width: 800px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+  border: 1px solid rgba(255,255,255,0.1);
+  overflow: hidden;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #1a1a1a;
+}
+
+.terminal-header p {
+  margin: 0 auto;
+}
+
+.terminal-body {
+  padding: 20px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.error {
+  background: #ff2a2a;
+  color: #ff2a2a;
+  padding: 4px;
+}
+
+.error:hover {
+color: white;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
 /* ===== RETO 4 — LOGS DE CONSOLA ===== */
 #contenedor-logs {
   width: 100%;

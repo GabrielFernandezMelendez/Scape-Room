@@ -34,10 +34,10 @@ function comprobarContrasena() {
   }
 }
 
+// reto1.js — DESPUÉS
 function accesoConcedido() {
- 
-  pantallaReto1.classList.add("oculta");
-  pantallaReto2.classList.remove("oculta");
+  mostrarPantalla(reto2);  // usa la función global de script.js
+  iniciarReto2();           // arranca la lógica del reto2
 }
 
 btnEnterReto1.addEventListener("click", comprobarContrasena);

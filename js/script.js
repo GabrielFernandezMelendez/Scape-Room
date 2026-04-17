@@ -19,7 +19,8 @@ const pantallaFinal = document.getElementById("pantalla-final");
 
 const btnEmpezar = document.getElementById("btn-empezar");
 const btnReto1 = document.getElementById("btn-reto1");
-const btnReto3 = document.getElementById("btn-reto3");
+// no se usa
+//const btnReto3 = document.getElementById("btn-reto3");
 const btnReiniciar = document.getElementById("btn-reiniciar");
 
 const numeroJugador = document.getElementById("numeroJugador");
@@ -63,11 +64,9 @@ function mostrarPantalla(pantalla) {
   ocultarPantallas();
   pantalla.classList.remove("oculta");
 
-  // Si es el reto4, inicializar su lógica 
-  if (pantalla.id === "reto2") {
-    if (typeof iniciarReto2 === "function") {
-      iniciarReto2();
-    }
+  // Si la pantalla que se acaba de mostrar es el reto 4, inicializa los logs automáticamente
+  if (pantalla.id === "reto4" && typeof window.iniciarReto4 === "function") {
+    window.iniciarReto4();
   }
 }
 
@@ -110,7 +109,7 @@ function reiniciarJuego() {
 // =========================
 //temporalmente pongo reto 4
 btnEmpezar.addEventListener("click", function () {
-  mostrarPantalla(reto2);
+  mostrarPantalla(reto1);
 });
 
 botonRendirse.forEach(btn => {
@@ -120,7 +119,8 @@ botonRendirse.forEach(btn => {
 });
 
 btnReto1.addEventListener("click", comprobarReto1);
-btnReto3.addEventListener("click", comprobarReto3);
+//tambien en desuso , posible futura  modificacion
+//btnReto3.addEventListener("click", comprobarReto3);
 btnReiniciar.addEventListener("click", reiniciarJuego);
 
 // =========================

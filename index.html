@@ -23,13 +23,31 @@
       <button id="btn-empezar">Empezar juego</button>
     </section>
 
-    <section id="reto1" class="pantalla oculta">
-      <h2>Reto 1</h2>
-      <p>Aquí irá el primer reto.</p>
-      <input type="number" id="numeroJugador" placeholder="Escribe tu respuesta">
-      <button id="btn-reto1">Comprobar</button>
-      <p id="mensajeReto1" class="mensaje"></p>
-    </section>
+   <section id="reto1" class="pantalla">
+  <div class="ContenedorLogin">
+
+    <div class="postIt">
+      <p>Login: admin</p>
+      <p>Pass: Gabriel_1987</p>
+      <p>- Don’t lose this!</p>
+    </div>
+
+    <h2>SYSTEM LOGIN</h2>
+    <p>Remote Access Terminal v2.4.1</p>
+
+    <label>Username:</label>
+    <input type="text" value="admin" disabled>
+
+    <label>Password:</label>
+    <input type="number" id="InputContrasena" placeholder="Enter password">
+
+    <button id="btnReto1">ENTER →</button>
+    <button id="btnSalida">CALL THE SENIOR</button>
+
+    <p id="mensajeReto1" class="mensaje"></p>
+
+  </div>
+</section>
 
     <section id="reto2" class="pantalla oculta">
     <div class="terminal-container">
@@ -152,6 +170,7 @@ Responsable: Tatiana
   <script src="js/reto4.js"></script>
   <script src="js/reto2.js"></script>
   <script src="js/reto3.js"></script>
+  <script src="js/reto1.js"></script>
 
 </body>
 

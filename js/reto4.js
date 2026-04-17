@@ -125,7 +125,7 @@
     if (btnExitoReiniciar) {
       //"RESTART CHALLENGE" (éxito) – actualmente reinicia el reto 4
       btnExitoReiniciar.addEventListener("click", function() {
- mostrarPantalla(pantallaInicio);
+mostrarPantalla(pantallaInicio);
 });
     }
     if (btnErrorReintentar) {

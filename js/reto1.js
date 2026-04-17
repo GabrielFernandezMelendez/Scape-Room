@@ -1,3 +1,6 @@
+function iniciarReto1() {
+}
+
 const btnEnterReto1 = document.getElementById("btnReto1");
 const inputContrasena = document.getElementById("InputContrasena");
 const msgReto1 = document.getElementById("mensajeReto1");

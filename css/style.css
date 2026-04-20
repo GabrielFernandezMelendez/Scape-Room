@@ -97,6 +97,34 @@ body {
   display: none !important;
 }
 
+#pantalla-inicio {
+  position: relative;  /* ancla el ::before dentro de la sección */
+  overflow: hidden;    /* recorta el gif si desborda */
+    /* rompe fuera del contenedor con márgenes negativos */
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  width: 100vw;
+}
+
+#pantalla-inicio::before {
+  content: '';
+  position: absolute;  /* lo saca del flujo flex, queda como fondo */
+  inset: 0;            /* cubre toda la sección: top/right/bottom/left = 0 */
+  background-image: url('../img/matrix-code.gif');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;       /* sutil para que el texto siga legible */
+  z-index: 0;          /* detrás del contenido */
+  pointer-events: none; /* el gif no interfiere con clicks */
+}
+
+/* Todo lo que está dentro de pantalla-inicio necesita z-index > 0
+   para quedar POR ENCIMA del ::before */
+#pantalla-inicio > * {
+  position: relative;
+  z-index: 1;
+}
+
 /* ===== PANTALLA INICIO ===== */
 #pantalla-inicio h2 {
   font-family: var(--font-display);
@@ -829,3 +857,4 @@ color: white;
     padding: 0 40px;
   }
 }
+

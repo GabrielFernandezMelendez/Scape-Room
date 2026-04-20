@@ -859,70 +859,33 @@ color: white;
 }
 
 
-
 /* ===== MARCO Y LOGIN (RETO 1) ===== */
 .marco-reto1 {
   position: relative;
-  border: 2px solid var(--border);      /* Borde visible */
+  border: 2px solid var(--border);
   background: rgba(0, 0, 0, 0.2);
-  border-radius: 0;                     /* Esquinas rectas para los post‑it */
+  border-radius: 0;
   padding: 2rem 1.5rem;
   margin: 2rem auto;
   max-width: 500px;
   width: 100%;
   box-shadow: 0 0 20px rgba(74, 222, 128, 0.1);
-  overflow: visible;                    /* Para que los post‑it sobresalgan */
+  overflow: visible;
 }
 
-.ContenedorLogin {
-  text-align: center;
-}
-
-.ContenedorLogin h2 {
-  font-size: 1.4rem;
-  letter-spacing: 0.2em;
-  margin-bottom: 0.5rem;
-}
-
-.ContenedorLogin p {
-  font-size: 0.8rem;
-  margin-bottom: 1.5rem;
-}
-
-.ContenedorLogin label {
-  display: block;
-  text-align: left;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  margin-top: 1rem;
-  color: var(--green-dim);
-}
-
-.ContenedorLogin input {
-  width: 100%;
-  margin-top: 0.3rem;
-}
-
-.ContenedorLogin button {
-  margin-top: 1.8rem;
-}
-
-/* ===== POST‑ITS SUPERIORES (triángulos plegados) ===== */
+/* ===== POST‑ITS SUPERIORES (triángulos visibles y funcionales) ===== */
 .papel {
   position: absolute;
-  top: -20px;            /* Sobresale por encima del marco */
+  top: -16px;            /* Sobresale del marco */
   cursor: pointer;
   z-index: 20;
   width: auto;
 }
-
-/* Posiciones horizontales distribuidas */
 .papel-top-1 { left: 5%; }
 .papel-top-2 { left: 30%; }
 .papel-top-3 { left: 55%; }
 .papel-top-4 { left: 80%; }
 
-/* El triángulo que se ve siempre (esquina doblada) */
 .esquina-plegada {
   width: 0;
   height: 0;
@@ -931,26 +894,20 @@ color: white;
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
 
-/* Orientaciones "acostadas" */
-.papel-top-1 .esquina-plegada {
-  border-width: 20px 20px 20px 0;
-  border-color: transparent #f5f0c0 transparent transparent;
-}
+/* Todos los triángulos iguales: apuntan hacia arriba */
+.papel-top-1 .esquina-plegada,
 .papel-top-2 .esquina-plegada,
-.papel-top-3 .esquina-plegada {
-  border-width: 20px 20px 0 0;
-  border-color: #f5f0c0 transparent transparent transparent;
-}
+.papel-top-3 .esquina-plegada,
 .papel-top-4 .esquina-plegada {
-  border-width: 20px 0 20px 20px;
-  border-color: transparent transparent transparent #f5f0c0;
+  border-width: 0 16px 16px 16px;
+  border-color: transparent transparent #fde68a transparent;
 }
 
-/* Contenido del post‑it (oculto hasta el clic) */
+/* Contenido del post‑it (se despliega al hacer clic) */
 .papel-contenido {
   display: none;
   position: absolute;
-  top: 100%;            /* Justo debajo del triángulo */
+  top: 100%;
   left: 0;
   margin-top: 8px;
   background: #fef7d2;
@@ -968,8 +925,6 @@ color: white;
   pointer-events: auto;
   white-space: normal;
 }
-
-/* Al abrir: ocultamos el triángulo y mostramos el contenido */
 .papel.abierto .esquina-plegada {
   opacity: 0;
   pointer-events: none;
@@ -978,7 +933,6 @@ color: white;
   display: block;
   animation: papelAbre 0.2s ease;
 }
-
 @keyframes papelAbre {
   from {
     opacity: 0;
@@ -990,7 +944,7 @@ color: white;
   }
 }
 
-/* Ajustes para móvil */
+/* Ajustes para móvil (opcional, pero recomendado) */
 @media (max-width: 550px) {
   .papel-top-1, .papel-top-2, .papel-top-3, .papel-top-4 {
     left: auto;
@@ -1003,14 +957,10 @@ color: white;
     width: 150px;
     font-size: 0.7rem;
   }
-  .papel-top-1 .esquina-plegada {
-    border-width: 16px 16px 16px 0;
-  }
+  .papel-top-1 .esquina-plegada,
   .papel-top-2 .esquina-plegada,
-  .papel-top-3 .esquina-plegada {
-    border-width: 16px 16px 0 0;
-  }
+  .papel-top-3 .esquina-plegada,
   .papel-top-4 .esquina-plegada {
-    border-width: 16px 0 16px 16px;
+    border-width: 0 12px 12px 12px;
   }
 }

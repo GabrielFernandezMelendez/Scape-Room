@@ -858,71 +858,159 @@ color: white;
   }
 }
 
-/* ===== PAPELES ESQUINAS — RETO 1 ===== */
 
-/* La sección del reto 1 necesita position relative
-   para que los papeles se posicionen respecto a ella */
-#reto1 {
+
+/* ===== MARCO Y LOGIN (RETO 1) ===== */
+.marco-reto1 {
   position: relative;
+  border: 2px solid var(--border);      /* Borde visible */
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 0;                     /* Esquinas rectas para los post‑it */
+  padding: 2rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(74, 222, 128, 0.1);
+  overflow: visible;                    /* Para que los post‑it sobresalgan */
 }
 
-/* Estilo base de cada papel */
+.ContenedorLogin {
+  text-align: center;
+}
+
+.ContenedorLogin h2 {
+  font-size: 1.4rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5rem;
+}
+
+.ContenedorLogin p {
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.ContenedorLogin label {
+  display: block;
+  text-align: left;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  margin-top: 1rem;
+  color: var(--green-dim);
+}
+
+.ContenedorLogin input {
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+.ContenedorLogin button {
+  margin-top: 1.8rem;
+}
+
+/* ===== POST‑ITS SUPERIORES (triángulos plegados) ===== */
 .papel {
-  position: absolute;  /* se posiciona respecto a #reto1 */
-  width: 130px;
+  position: absolute;
+  top: -20px;            /* Sobresale por encima del marco */
   cursor: pointer;
-  z-index: 10;         /* encima del formulario */
+  z-index: 20;
+  width: auto;
 }
 
-/* Posición de cada esquina */
-.papel-tl { top: 16px;    left: 16px; }
-.papel-tr { top: 16px;    right: 16px; }
-.papel-bl { bottom: 16px; left: 16px; }
-.papel-br { bottom: 16px; right: 16px; }
+/* Posiciones horizontales distribuidas */
+.papel-top-1 { left: 5%; }
+.papel-top-2 { left: 30%; }
+.papel-top-3 { left: 55%; }
+.papel-top-4 { left: 80%; }
 
-/* La orejita visible antes de abrir */
-.papel-solapa {
-  font-size: 1.6rem;
-  transition: transform 0.2s ease;
-  user-select: none; /* evita que se seleccione el emoji al hacer click */
+/* El triángulo que se ve siempre (esquina doblada) */
+.esquina-plegada {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  transition: all 0.2s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
 
-.papel:hover .papel-solapa {
-  transform: scale(1.2);
+/* Orientaciones "acostadas" */
+.papel-top-1 .esquina-plegada {
+  border-width: 20px 20px 20px 0;
+  border-color: transparent #f5f0c0 transparent transparent;
+}
+.papel-top-2 .esquina-plegada,
+.papel-top-3 .esquina-plegada {
+  border-width: 20px 20px 0 0;
+  border-color: #f5f0c0 transparent transparent transparent;
+}
+.papel-top-4 .esquina-plegada {
+  border-width: 20px 0 20px 20px;
+  border-color: transparent transparent transparent #f5f0c0;
 }
 
-/* El contenido oculto por defecto */
+/* Contenido del post‑it (oculto hasta el clic) */
 .papel-contenido {
-  display: none;           /* oculto hasta que se añada .abierto */
-  position: absolute;      /* se superpone encima de todo */
-  z-index: 100;
-  background: #f5f0c0;     /* amarillo post-it */
-  color: #1a1a1a;
+  display: none;
+  position: absolute;
+  top: 100%;            /* Justo debajo del triángulo */
+  left: 0;
+  margin-top: 8px;
+  background: #fef7d2;
+  color: #1e1e1e;
   font-family: 'Courier New', monospace;
-  font-size: 0.72rem;
-  line-height: 1.7;
+  font-size: 0.75rem;
+  line-height: 1.6;
   padding: 12px 14px;
-  border: 1px solid #d4c84a;
-  box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
-  width: 160px;
-  border-radius: 2px;
+  border-radius: 4px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.3);
+  width: 180px;
+  z-index: 30;
+  border-left: 3px solid #e6d48b;
+  text-align: left;
+  pointer-events: auto;
+  white-space: normal;
+}
+
+/* Al abrir: ocultamos el triángulo y mostramos el contenido */
+.papel.abierto .esquina-plegada {
+  opacity: 0;
+  pointer-events: none;
+}
+.papel.abierto .papel-contenido {
+  display: block;
   animation: papelAbre 0.2s ease;
 }
 
-/* Cada esquina abre en una dirección diferente
-   para que no se salgan de la pantalla */
-.papel-tl .papel-contenido { top: 0;    left: 0; }
-.papel-tr .papel-contenido { top: 0;    right: 0; }
-.papel-bl .papel-contenido { bottom: 28px; left: 0; }
-.papel-br .papel-contenido { bottom: 28px; right: 0; }
-
-/* Cuando el papel tiene clase .abierto, muestra el contenido */
-.papel.abierto .papel-contenido {
-  display: block;
+@keyframes papelAbre {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Animación de apertura */
-@keyframes papelAbre {
-  from { opacity: 0; transform: scale(0.85); }
-  to   { opacity: 1; transform: scale(1); }
+/* Ajustes para móvil */
+@media (max-width: 550px) {
+  .papel-top-1, .papel-top-2, .papel-top-3, .papel-top-4 {
+    left: auto;
+  }
+  .papel-top-1 { left: 2%; }
+  .papel-top-2 { left: 27%; }
+  .papel-top-3 { left: 52%; }
+  .papel-top-4 { left: 77%; }
+  .papel-contenido {
+    width: 150px;
+    font-size: 0.7rem;
+  }
+  .papel-top-1 .esquina-plegada {
+    border-width: 16px 16px 16px 0;
+  }
+  .papel-top-2 .esquina-plegada,
+  .papel-top-3 .esquina-plegada {
+    border-width: 16px 16px 0 0;
+  }
+  .papel-top-4 .esquina-plegada {
+    border-width: 16px 0 16px 16px;
+  }
 }

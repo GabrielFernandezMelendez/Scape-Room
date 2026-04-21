@@ -17,6 +17,10 @@
   --border-hover: rgba(74, 222, 128, 0.8);
   --font-mono:    'Share Tech Mono', 'Courier New', monospace;
   --font-display: 'VT323', monospace;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
 }
 
 /* ===== RESET ===== */
@@ -266,7 +270,7 @@ body {
   border: 1px solid var(--border);
   border-left: 3px solid var(--green);
   padding: 20px 28px;
-  border-radius: 2px;
+  border-radius:var(--radius-terminal);
   margin-bottom: 1.5rem;
   text-align: left;
   max-width: 480px;
@@ -304,7 +308,7 @@ body {
   font-size: 0.8rem;
   cursor: pointer;
   letter-spacing: 0.05em;
-  border-radius: 2px;
+  border-radius: var(--radius-terminal);
   transition: all 0.15s ease;
 }
 
@@ -416,7 +420,7 @@ button:active {
   width: 100%;
   background: rgba(0, 0, 0, 0.7);
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: var(--radius-terminal);
   padding: 25px 20px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   text-align: left;
@@ -519,7 +523,7 @@ button:active {
   letter-spacing: 0.15em;
   padding: 16px 40px;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: var(--radius-terminal);
   text-transform: uppercase;
   transition: all 0.3s;
   width: auto;
@@ -571,8 +575,8 @@ button:active {
 /* ===== RETO 3 — TEMPERATURA OCULTA ===== */
 
 .terminal {
-  background: #111;
-  border-radius: 14px;
+  background: var(--bg);
+  border-radius: 1var(--radius-terminal);
   width: 800px;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
   border: 1px solid rgba(255,255,255,0.1);
@@ -704,7 +708,7 @@ color: white;
   max-width: 600px;
   width: 100%;
   border: 2px solid;
-  border-radius: 8px;
+  border-radius: var(--radius-terminal);
   padding: 30px 25px;
   background: rgba(0, 0, 0, 0.7);
   box-shadow: 0 0 30px rgba(0, 255, 0, 0.1);
@@ -912,7 +916,7 @@ color: white;
   margin-top: 8px;
   background: #fef7d2;
   color: #1e1e1e;
-  font-family: 'Courier New', monospace;
+  font-family: var(--font-mono);
   font-size: 0.75rem;
   line-height: 1.6;
   padding: 12px 14px;

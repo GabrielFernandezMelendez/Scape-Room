@@ -13,7 +13,6 @@
 
     // Botones de las pantallas de resultado
     const btnExitoContinuar = document.getElementById("btn-exito-continuar");
-    const btnExitoReiniciar = document.getElementById("btn-exito-reiniciar");
     const btnErrorReintentar = document.getElementById("btn-error-reintentar");
     const btnReiniciarReto4 = document.getElementById("btn-reiniciar-reto4"); // Botón dentro del reto 4
 
@@ -119,12 +118,6 @@
     // Asociamos cada botón con su función correspondiente.
     if (btnExitoContinuar) {
       btnExitoContinuar.addEventListener("click", continuarAlFinal);
-    }
-    if (btnExitoReiniciar) {
-      //"RESTART CHALLENGE" (éxito) – actualmente reinicia el reto 4
-      btnExitoReiniciar.addEventListener("click", function () {
-        mostrarPantalla(pantallaInicio);
-      });
     }
     if (btnErrorReintentar) {
       btnErrorReintentar.addEventListener("click", () =>

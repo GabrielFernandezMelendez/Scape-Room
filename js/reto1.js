@@ -82,9 +82,9 @@ if (primerPapel) {
 }
 
 
-// ── Función de inicio (por si se llama desde el flujo) ───
+/* // ── Función de inicio (por si se llama desde el flujo) ───
 function iniciarReto1() {
   inputContrasena.value = "";
   msgReto1.textContent  = "";
   msgReto1.className    = "mensaje";
-}
+} */

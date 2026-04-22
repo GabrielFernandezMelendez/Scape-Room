@@ -23,16 +23,16 @@ const btnReto1 = document.getElementById("btn-reto1");
 //const btnReto3 = document.getElementById("btn-reto3");
 const btnReiniciar = document.getElementById("btn-reiniciar");
 
-const numeroJugador = document.getElementById("numeroJugador");
+/* const numeroJugador = document.getElementById("numeroJugador"); */
 const mensajeReto1 = document.getElementById("mensajeReto1");
 
 const listaPalabras = document.getElementById("listaPalabras");
 const mensajeReto2 = document.getElementById("mensajeReto2");
 
-const nombrePersonaje = document.getElementById("nombrePersonaje");
+/* const nombrePersonaje = document.getElementById("nombrePersonaje");
 const edadPersonaje = document.getElementById("edadPersonaje");
 const profesionPersonaje = document.getElementById("profesionPersonaje");
-const respuestaCiudad = document.getElementById("respuestaCiudad");
+const respuestaCiudad = document.getElementById("respuestaCiudad"); */
 const mensajeReto3 = document.getElementById("mensajeReto3");
 
 //pantalla de exito y de error
@@ -95,11 +95,11 @@ function comprobarReto2(opcionSeleccionada) {
 
 
 function reiniciarJuego() {
-  numeroJugador.value = "";
-  respuestaCiudad.value = "";
-  mensajeReto1.textContent = "";
+  inputContrasena.value = "";
+  inputRespuesta.value = "";
+  /* mensajeReto1.textContent = "";
   mensajeReto2.textContent = "";
-  mensajeReto3.textContent = "";
+  mensajeReto3.textContent = ""; */
 
   mostrarPantalla(pantallaInicio);
 }

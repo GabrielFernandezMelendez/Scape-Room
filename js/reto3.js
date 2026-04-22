@@ -1,8 +1,4 @@
 
-function iniciarReto3() {
-}
-
-
 // el objeto
 const serverStatus = { 
 cpuLoad: "99%",

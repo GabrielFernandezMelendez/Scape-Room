@@ -1,6 +1,6 @@
 
 
-let timeLeft = 10;
+let timeLeft = 300;
 let timerId = null;
 const display = document.getElementById('timer-display');
 

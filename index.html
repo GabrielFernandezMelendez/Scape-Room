@@ -19,139 +19,151 @@
   <main class="contenedor">
 
     <section id="pantalla-inicio" class="pantalla">
-      <h2>Bienvenido/a</h2>
-      <p>Estás atrapado en una web misteriosa. Supera los retos para escapar.</p>
+      <h2>🚨 [SISTEMA EN CRISIS] 🚨</h2>
+
+      <p>Es <strong>viernes a las 17:55</strong>. Tu Senior Developer apagó el móvil y se fue de vacaciones.</p>
+
+      <p class="alerta-roja">EL SERVIDOR SE CAE. TODO EMPIEZA A ARDER.</p>
+
+      <p>Eres el único Junior en la oficina. Supera los retos para escapar.</p>
+
+      <p><strong>¡Cuidado! El tiempo es limitado</strong> y empezará a correr en cuanto pulses el botón.</p>
+
+
       <button onclick="startTimer()" id="btn-empezar">Empezar juego</button>
+
+      <p><strong>Eres nuestra única esperanza.</strong></p>
     </section>
 
-   <!--  RETO 1 -->
-<section id="reto1" class="pantalla oculta">
+    <!--  RETO 1 -->
+    <section id="reto1" class="pantalla oculta">
 
-  <!-- Contenedor con marco y posición relativa para los post‑it -->
-  <div class="marco-reto1">
+      <!-- Contenedor con marco y posición relativa para los post‑it -->
+      <div class="marco-reto1">
 
-    <div class="ContenedorLogin">
-      <h2>SYSTEM LOGIN</h2>
-      <p>Remote Access Terminal v2.4.1</p>
+        <div class="ContenedorLogin">
+          <h2>SYSTEM LOGIN</h2>
+          <p>Remote Access Terminal v2.4.1</p>
 
-      <label>Username:</label>
-      <input type="text" value="admin" disabled>
+          <label>Username:</label>
+          <input type="text" value="admin" disabled>
 
-      <label>Password:</label>
-      <input type="number" id="InputContrasena" placeholder="Enter password">
+          <label>Password:</label>
+          <input type="number" id="InputContrasena" placeholder="Enter password">
 
-      <button id="btnReto1">ENTER →</button>
-      <button class="senior-btn">CALL THE SENIOR</button>
+          <button id="btnReto1">ENTER →</button>
+          <button class="senior-btn">CALL THE SENIOR</button>
 
-      <p id="mensajeReto1" class="mensaje"></p>
-    </div>
+          <p id="mensajeReto1" class="mensaje"></p>
+        </div>
 
-    <!-- Post‑its en la parte superior (sobresalen) -->
-<div class="papel papel-top-1">
-  <div class="esquina-plegada"></div>
-  <div class="papel-contenido">
-    <p>Note to self:</p>
-    <p>"Use birth year as always"</p>
-    <p>- G</p>
-  </div>
-</div>
+        <!-- Post‑its en la parte superior (sobresalen) -->
+        <div class="papel papel-top-1">
+          <div class="esquina-plegada"></div>
+          <div class="papel-contenido">
+            <p>Note to self:</p>
+            <p>"Use birth year as always"</p>
+            <p>- G</p>
+          </div>
+        </div>
 
-<div class="papel papel-top-2">
-  <div class="esquina-plegada"></div>
-  <div class="papel-contenido">
-    <p>Wi-Fi: Office_5G</p>
-    <p>Pass: Gab<strong>1987</strong>!</p>
-    <p>(change this!!)</p>
-  </div>
-</div>
+        <div class="papel papel-top-2">
+          <div class="esquina-plegada"></div>
+          <div class="papel-contenido">
+            <p>Wi-Fi: Office_5G</p>
+            <p>Pass: Gab<strong>1987</strong>!</p>
+            <p>(change this!!)</p>
+          </div>
+        </div>
 
-<div class="papel papel-top-3">
-  <div class="esquina-plegada"></div>
-  <div class="papel-contenido">
-    <p>Gabriel born:</p>
-    <p>03 / 06 / <strong>1987</strong></p>
-    <p>Birthday reminder ✓</p>
-  </div>
-</div>
+        <div class="papel papel-top-3">
+          <div class="esquina-plegada"></div>
+          <div class="papel-contenido">
+            <p>Gabriel born:</p>
+            <p>03 / 06 / <strong>1987</strong></p>
+            <p>Birthday reminder ✓</p>
+          </div>
+        </div>
 
-<div class="papel papel-top-4">
-  <div class="esquina-plegada"></div>
-  <div class="papel-contenido">
-    <p>Server password</p>
-    <p>format: name + year</p>
-    <p>e.g: Gabriel_????</p>
-  </div>
-</div>
-  </div>
-</section>
+        <div class="papel papel-top-4">
+          <div class="esquina-plegada"></div>
+          <div class="papel-contenido">
+            <p>Server password</p>
+            <p>format: name + year</p>
+            <p>e.g: Gabriel_????</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="reto2" class="pantalla oculta">
-    <div class="terminal-container">
+      <div class="terminal-container">
         <header>
-            <h1>BROWSER HISTORY</h1>
-            <p class="subtitle">Last accessed: 2 minutes ago</p>
-            <p class="warning">Find the clue before time runs out ...</p>
+          <h1>BROWSER HISTORY</h1>
+          <p class="subtitle">Last accessed: 2 minutes ago</p>
+          <p class="warning">Find the clue before time runs out ...</p>
         </header>
 
         <div id="history-grid" class="grid-container"></div>
 
         <div class="button-wrapper">
-            <button class="senior-btn">CALL THE SENIOR</button>
+          <button class="senior-btn">CALL THE SENIOR</button>
         </div>
         <p id="mensajeReto2" class="mensaje"></p>
         <div id="message-box" class="hidden"></div>
-        
-    </div>
+
+      </div>
     </section>
 
-<!-- =========================
+    <!-- =========================
 RETO 3 — TEMPERATURA OCULTA
 Responsable: Tatiana
 ========================= -->
-<section id="reto3" class="pantalla oculta">  
+    <section id="reto3" class="pantalla oculta">
 
-<div class="terminal">
-  <div class="terminal-header">
+      <div class="terminal">
+        <div class="terminal-header">
 
-    <span class="dot red"></span>
-    <span class="dot yellow"></span>
-    <span class="dot green"></span>
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
 
-    <p>server-config.json</p>
-  </div>
+          <p>server-config.json</p>
+        </div>
 
-  <div class="terminal-body">
-  
-    <p>1 cpuLoad: <span id="cpuLoad"></span></p>
-    <p>2 "ip": "192.168.1.111.1123",</p>
-    <p>3 "uptime": "72 days",</p>
-    <p class="error">4 temperature: <span id="temp-value"></span></p>
-    <p>5 "status": "overheated"</p>
-    <p>6 "lastChecked": "2024-06-01T12:00:00Z"</p>
-    <p>7 "actions": ["shutdown", "coolingSystem", "notifyAdmin"]</p>
-   
+        <div class="terminal-body">
 
-  <input type="text" id="respuestaReto3" placeholder="¿Cuál es la temperatura?">
+          <p>1 cpuLoad: <span id="cpuLoad"></span></p>
+          <p>2 "ip": "192.168.1.111.1123",</p>
+          <p>3 "uptime": "72 days",</p>
+          <p class="error">4 temperature: <span id="temp-value"></span></p>
+          <p>5 "status": "overheated"</p>
+          <p>6 "lastChecked": "2024-06-01T12:00:00Z"</p>
+          <p>7 "actions": ["shutdown", "coolingSystem", "notifyAdmin"]</p>
 
-  <p id="mensajeReto3" class="mensaje"></p>
 
-</div>
-</div>
+          <input type="text" id="respuestaReto3" placeholder="¿Cuál es la temperatura?">
 
-<button class="senior-btn">CALL THE SENIOR</button>
+          <p id="mensajeReto3" class="mensaje"></p>
 
-</section>
+        </div>
+      </div>
 
-<section id="reto4" class="pantalla oculta">
-  <h2>// reto 4 — limpieza de consola</h2>
-  <p>El terminal está lleno de basura. Encuentra y elimina el <span class="alerta">CRITICAL BUG</span> para arrancar el servidor.</p>
-  <!-- aqui se meteran los logs -->
-  <div id="contenedor-logs"></div>
-  <!-- NUEVO BOTÓN -->
-  <button id="btn-reiniciar-reto4" class="btn-secundario">↻ Reiniciar consola</button>
-  <button id="btnSalida" class="senior-btn">CALL THE SENIOR</button>
-  <p id="mensajeReto4" class="mensaje"></p>
-</section>
+      <button class="senior-btn">CALL THE SENIOR</button>
+
+    </section>
+
+    <section id="reto4" class="pantalla oculta">
+      <h2>// reto 4 — limpieza de consola</h2>
+      <p>El terminal está lleno de basura. Encuentra y elimina el <span class="alerta">CRITICAL BUG</span> para arrancar
+        el servidor.</p>
+      <!-- aqui se meteran los logs -->
+      <div id="contenedor-logs"></div>
+      <!-- NUEVO BOTÓN -->
+      <button id="btn-reiniciar-reto4" class="btn-secundario">↻ Reiniciar consola</button>
+      <button id="btnSalida" class="senior-btn">CALL THE SENIOR</button>
+      <p id="mensajeReto4" class="mensaje"></p>
+    </section>
 
     <section id="pantalla-final" class="pantalla oculta">
       <h2>¡Has escapado!</h2>

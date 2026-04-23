@@ -13,6 +13,7 @@
   <header class="cabecera">
     <h1>Escape Room Web</h1>
     <p>Resuelve los retos para escapar</p>
+    <span id="timer-display">00:00</span>
   </header>
 
   <main class="contenedor">
@@ -20,7 +21,7 @@
     <section id="pantalla-inicio" class="pantalla">
       <h2>Bienvenido/a</h2>
       <p>Estás atrapado en una web misteriosa. Supera los retos para escapar.</p>
-      <button id="btn-empezar">Empezar juego</button>
+      <button onclick="startTimer()" id="btn-empezar">Empezar juego</button>
     </section>
 
    <!--  RETO 1 -->
@@ -206,6 +207,7 @@ Responsable: Tatiana
   <script src="js/reto2.js"></script>
   <script src="js/reto3.js"></script>
   <script src="js/reto1.js"></script>
+  <script src="js/time.js" defer></script>
 
 </body>
 

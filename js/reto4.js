@@ -66,8 +66,11 @@
         reto4Completado = true;
         ocultarPantallaReto4YMostrar(pantallaExito);
       } else {
-        // FALLO: se hizo clic en un log normal
-        ocultarPantallaReto4YMostrar(pantallaError);
+        // FALLO — feedback visual sin salir del reto
+        logClickeado.classList.add("descartado");
+        const msgReto4 = document.getElementById("mensajeReto4");
+        msgReto4.textContent = "That's not the critical bug. Keep looking...";
+        msgReto4.className = "mensaje incorrecto";
       }
     }
 
@@ -119,11 +122,13 @@
     if (btnExitoContinuar) {
       btnExitoContinuar.addEventListener("click", continuarAlFinal);
     }
-    if (btnErrorReintentar) {
-      btnErrorReintentar.addEventListener("click", () =>
-        mostrarPantalla(pantallaInicio),
-      );
-    }
+   if (btnErrorReintentar) {
+  btnErrorReintentar.addEventListener("click", () => {
+    // Si sabemos en qué reto estaba, volvemos ahí. Si no, al inicio.
+    const destino = retoActual || pantallaInicio;
+    mostrarPantalla(destino);
+  });
+}
     if (btnReiniciarReto4) {
       btnReiniciarReto4.addEventListener("click", reiniciarReto4);
     }

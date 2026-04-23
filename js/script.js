@@ -64,7 +64,12 @@ function mostrarPantalla(pantalla) {
   ocultarPantallas();
   pantalla.classList.remove("oculta");
 
-  // Si la pantalla que se acaba de mostrar es el reto 4, inicializa los logs automáticamente
+  // Si es un reto (no pantalla de inicio, error o éxito), lo guardamos
+  if (["reto1", "reto2", "reto3", "reto4"].includes(pantalla.id)) {
+    retoActual = pantalla;
+  }
+
+    // asi  se muestran  los  logs nada mas iniciar la pantalla
   if (pantalla.id === "reto4" && typeof window.iniciarReto4 === "function") {
     window.iniciarReto4();
   }

@@ -65,6 +65,7 @@
         // ACIERTO: se encontró el CRITICAL BUG
         reto4Completado = true;
         ocultarPantallaReto4YMostrar(pantallaExito);
+        stopTimer() //para temporizador
       } else {
         // FALLO — feedback visual sin salir del reto
         logClickeado.classList.add("descartado");

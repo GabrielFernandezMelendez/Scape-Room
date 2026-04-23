@@ -120,6 +120,7 @@ btnEmpezar.addEventListener("click", function () {
 botonRendirse.forEach(btn => {
   btn.addEventListener("click", () => {
     mostrarPantalla(pantallaError);
+    stopTimer() //para temporizador
   });
 });
 
